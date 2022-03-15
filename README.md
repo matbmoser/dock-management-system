@@ -190,7 +190,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [tags-url]: https://github.com/UFV-INGINF/gestor-muelles-feedex/tags
 [issues-shield]: https://img.shields.io/github/issues/UFV-INGINF/gestor-muelles-feedex.svg?style=for-the-badge
 [issues-url]: https://github.com/UFV-INGINF/gestor-muelles-feedex/issues
-[license-shield]: https://img.shields.io/github/license/UFV-INGINF/gestor-muelles-feedex.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/badge/Copyright-All%20rights%20reserved-green?style=for-the-badge
 [license-url]: https://github.com/UFV-INGINF/gestor-muelles-feedex/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mathias-brunkow-moser
