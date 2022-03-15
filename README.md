@@ -194,4 +194,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [license-url]: https://github.com/UFV-INGINF/gestor-muelles-feedex/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mathias-brunkow-moser
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/logo.png
