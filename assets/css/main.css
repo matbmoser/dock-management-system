@@ -1,0 +1,43 @@
+:root{
+    --bg-color: #212529;
+    --color: #f8f9fa;
+}
+body {
+    background-color:var(--bg-color)!important;
+    color: var(--color)!important;
+    transition: all .25s ease;
+}
+.body{
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.form-signin {
+    width: 100%;
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+    background-color: var(--color)!important;
+    color: var(--bg-color)!important;
+    transition: all .25s ease;
+}
+#return{
+    color: var(--color)!important;
+    transition: all .25s ease;
+}
+#return:hover{
+    transition: all .25s ease;
+    opacity: 0.6;
+}
+#demo{
+    display: none!important;
+}
+.cat-opt{
+    width: 100%;
+    margin: 1px 5px 0 5px;
+}
+.logo{
+    width: 12em;
+    margin-left: 8px;
+}
