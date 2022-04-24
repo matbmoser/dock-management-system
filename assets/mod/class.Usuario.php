@@ -7,17 +7,18 @@
  * @license   http://www.wejyc.com/license
  */
 class Usuario{
-    private $dbHost     = "localhost";
-    private $dbUsername = "root";
-    private $dbPassword = "NdVd4XxwoBfJ4Qx1";
-    private $dbName     = "ufveats";
+    private $host_db    = "localhost";
+    private $user_db    = "dbAdmin";
+    private $pass_db    = "sT7x7BrutH!fi2Utri";
+    private $db_name    = "sgm";
+    private $db_port    = 3806;
     private $table      = "user";
-    
-    
+
+
     public function __construct(){
         if(!isset($this->db)){
             // Connect to the database
-            $conn = new mysqli($this->dbHost, $this->dbUsername, $this->dbPassword, $this->dbName);
+            $conn = new mysqli($this->host_db, $this->user_db, $this->pass_db, $this->db_name, $this->db_port);
             if($conn->connect_error){
                 die("Failed to connect with MySQL: ".$this->table. $conn->connect_error);
             }else{
@@ -189,14 +190,10 @@ class Usuario{
      * @param array the data to insert or update into the table
      */
     function checkUser($userData = array()){
-        if(!empty($userData)){
-            // Check whether user data already exists in database with same oauth info
-            $prevQuery = "SELECT * FROM ".$this->table." WHERE oauth_provider = '".$userData['oauth_provider']."' AND oauth_uid = '".$userData['oauth_uid']."'";
-            $prevResult = $this->db->query($prevQuery);
-            
+        if(!empty($userData)){            
             // Check whether user data already exists in database with same email
-            $prevQuery2 = "SELECT * FROM ".$this->table." WHERE email != '' AND email = '".$userData['email']."'";
-            $prevResult2 = $this->db->query($prevQuery2);
+            $prevQuery = "SELECT * FROM ".$this->table." WHERE email != '' AND email = '".$userData['email']."'";
+            $prevResult = $this->db->query($prevQuery);
             
             if($prevResult->num_rows > 0){
                 $cols_vals = '';
@@ -215,14 +212,14 @@ class Usuario{
     
                 //update data
                 $update = $this->db->query($query);
-            }elseif($prevResult2->num_rows > 0){
+            }elseif($prevResult->num_rows > 0){
                 // Update user data if already exists
                 if(!array_key_exists('modified',$userData)){
                     $userData['modified'] = date("Y-m-d H:i:s");
                 }
 
                 //prepare sql query
-                $query = "UPDATE ".$this->table." SET oauth_provider = '".$userData['oauth_provider']."', oauth_uid = '".$userData['oauth_uid']."', modified = '".$userData['modified']."' WHERE email = '".$userData['email']."'";
+                $query = "UPDATE ".$this->table." SET modified = '".$userData['modified']."' WHERE email = '".$userData['email']."'";
     
                 //update data
                 $update = $this->db->query($query);

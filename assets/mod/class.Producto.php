@@ -3,17 +3,18 @@
 
 class Producto
 {
-    private $dbHost     = "localhost";
-    private $dbUsername = "root";
-    private $dbPassword = "NdVd4XxwoBfJ4Qx1";
-    private $dbName     = "ufveats";
+    private $host_db    = "localhost";
+    private $user_db    = "dbAdmin";
+    private $pass_db    = "sT7x7BrutH!fi2Utri";
+    private $db_name    = "sgm";
+    private $db_port    = 3806;
     private $table      = "producto";
 
 
     public function __construct(){
         if(!isset($this->db)){
             // Connect to the database
-            $conn = new mysqli($this->dbHost, $this->dbUsername, $this->dbPassword, $this->dbName);
+            $conn = new mysqli($this->host_db, $this->user_db, $this->pass_db, $this->db_name, $this->db_port);
             if($conn->connect_error){
                 die("Failed to connect with MySQL: ".$this->table. $conn->connect_error);
             }else{

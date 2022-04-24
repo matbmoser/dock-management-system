@@ -1,23 +1,33 @@
 
 <?php
-if (empty($_POST['names']) || empty($_POST['numbers']) || $_POST['numbers'] == 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'){
+$configs = include('config.php');
+$dbconfig = include("db.config.php");
+include("connect.php");
+if (empty($_POST['email']) || empty($_POST['pass']) || $_POST['uuid'] != $configs["securityUUIDToken"]){
 
-    echo json_encode(array('success' => '0'));
+    echo json_encode(array('responseCode' => $configs["wrongRequestToken"]));
+    exit;
 
-} else {
-    include ("connect.php");
-    require_once("sha.php");
-    $sql = "SELECT `userid` AS ID, `email` AS CORREO ,`password` AS PASS from `user` where `email`="."'".mysqli_real_escape_string($conexion,$_POST['names'])."'"." AND `password`="."'".mysqli_real_escape_string($conexion,$_POST['numbers'])."'";
-    if($result = $conexion->query($sql)){
-            $row = $result->fetch_object();
-            $token = sha256($row->CORREO.$row->PASS);
-        if($row->ID != NULL && $_POST['token'] == $token){
-            echo json_encode(array('success' => '1','userid' => $row->ID, 'token' => $token));
-        }else{
-            echo json_encode(array('success' => '0'));
-        }
-    }else{
-        echo json_encode(array('success' => '0'));
-    }
 }
-?>
+
+$sql = "SELECT * from `user` where `email`="."'".mysqli_real_escape_string($conexion,$_POST['email'])."'"." AND `password`="."'".mysqli_real_escape_string($conexion,$_POST['pass'])."'";
+if($result = $conexion->query($sql)){
+    $row = $result->fetch_object();
+    if(empty($row)){
+        echo json_encode(array('responseCode' => $configs["wrongUserPassToken"]));
+        exit;
+    }
+    $token = hash('sha256',$row->email.$row->password);
+    if($row->username == NULL && $_POST['token'] != $token){
+        echo json_encode(array('responseCode' => $configs["securityErrorToken"]));
+        exit;
+    }
+
+    $arraySucess=array('responseCode' => $configs["successToken"]);
+    $userData = json_decode(json_encode($row), true);
+    echo json_encode(array_merge($arraySucess,$userData));
+
+}else{
+    echo json_encode(array('responseCode' => $configs["connectionFail"]));
+}
+
