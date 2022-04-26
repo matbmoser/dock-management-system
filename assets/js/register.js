@@ -16,7 +16,7 @@ if(closeButton != null){
 
 $(function() {
     let http = new XMLHttpRequest();
-    let form = document.getElementById("loginform");
+    let form = document.getElementById("registerform");
     form.addEventListener('submit', async function(event) {
         if (form.checkValidity() === false) {
             event.preventDefault();
@@ -24,26 +24,33 @@ $(function() {
             form.classList.add('was-validated'); //Y cambia la classe del formulario, para validado
         } //Si son validos el bucle se detiene
         else{
-            let user = document.getElementById("inputEmail").value.toLowerCase();
-            let pass = document.getElementById("inputPassword").value;
-
-            if (user == "" || pass == "" || user==null || pass==null){
+            var email = $('#registerEmail').val().toLowerCase();
+            var nombre = $('#registerNombre').val();
+            var apellidos = $('#registerApellidos').val();
+            var pass = $('#registerPassword').val();
+            var documento = $('#registerDocumento').val();
+            var confirmPass = $('#registerConfirmPassword').val();
+            var fechaNacimiento = $('#registerFechaNacimiento').val();
+            var remember = document.getElementById("remember");
+            
+            
+            if (email == "" || nombre == "" || documento =="" || apellidos== ""  || pass== ""  || confirmPas== ""  || fechaNacimiento== "" || confirm== "" || !remember.checked){
                 event.preventDefault();
                 event.stopPropagation();
                 form.classList.add('was-validated'); //Y cambia la classe del formulario, para validado
                 return true 
             }
-            
-            let remember = document.getElementById("remember");
-            if(remember.checked){
-                setCookie("__chgn", CryptoJS.AES.encrypt(user, getSession()).toString(), 0.2);
-                //setCookie("__efbr", CryptoJS.AES.encrypt(pass, getSession()).toString(),0.2);
-            }else{
-                setCookie("__chgn", "", 0);
-                //setCookie("__efbr", "", 0);
+
+            if(confirmPass != pass){
+                window.location.search = "?result="+configs["confirmPasswordToken"];
+                return true 
             }
+
+            const params = await prepare(email,nombre,documento, apellidos,pass, fechaNacimiento);
+        
             http.onreadystatechange = function() {
                 if(http.readyState === 4) {
+                    alert(http.responseText)
                     var responseCode = configs["wrongRequestToken"];
 
                     try{
@@ -66,8 +73,7 @@ $(function() {
 
                 }
             }
-            const params = await encrypt(user,pass);
-            const url = '../assets/mod/login.php';
+            const url = '../assets/mod/register.php';
             http.open('POST',url,false);
             http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             http.send(params);
@@ -76,12 +82,12 @@ $(function() {
     }, false);
 });
 
-async function encrypt(user, pass){
+async function prepare(email,nombre,apellidos,pass, fechaNacimiento){
     const cryptpass = await sha256(pass);
     const seed = user+cryptpass;
     const token = await sha256(seed);
     const UUID = getCookie("UUID");
-    return 'email='+user+'&pass='+ cryptpass + '&token=' + token + "&uuid=" + UUID;
+    return 'email='+email +'&nombre='+ nombre +'&documento' + documento+ '&apellidos='+ apellidos +'&pass='+ cryptpass + '&fechaNacimiento='+ fechaNacimiento + '&token=' + token + "&uuid=" + UUID;
 }
 
 

@@ -33,8 +33,8 @@
   <link rel="stylesheet" type="text/css" href="../assets/bt/css/bootstrap.css"/>
   <script src="../assets/js/libs/jquery/jquery-3.5.1.slim.min.js"></script>
   <script src="https://kit.fontawesome.com/6d67b863f5.js" crossorigin="anonymous"></script>
-      <!-- Custom styles for this template -->
-      <link href="auth.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="auth.css" rel="stylesheet">
 </script>
     <style>
       .bd-placeholder-img {
@@ -53,7 +53,7 @@
       }
     </style>
 
-
+  
   </head>
 <body class="body">
 <script>var configs = <?php echo json_encode($configs); ?>;</script>
@@ -65,14 +65,70 @@
       </div>
     </header>
 <main class="form-signin" >
-  <form id="loginform" method="post" class="needs-validation" novalidate autocomplete="off">
+  <form id="registerform" method="post" class="needs-validation" novalidate autocomplete="off">
     <div class="text-center">
       <img id="logo" src="../media/img/feedex.png" alt="logoufv">
     </div>
     <div class="form-label-group">
+      <div class="row">
+      <div class="col-md-6">
+        <div class="form-floating field">
+          <input type="text" id="registerNombre" class="form-control" placeholder="Nombre" required>
+          <label for="registerNombre">Nombre</label>
+          <div class="invalid-feedback">
+              Por favor introduza su nombre!
+          </div>
+          <div class="valid-feedback">
+              OK!
+          </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+        <div class="form-floating field">
+          <input type="text" id="registerApellidos" class="form-control" placeholder="Apellidos" required>
+          <label for="registerApellidos">Apellidos</label>
+          <div class="invalid-feedback">
+              Por favor introduza sus apellidos!
+          </div>
+          <div class="valid-feedback">
+              OK!
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-label-group">
+      <div class="row">
+      <div class="col-md-6">
+        <div class="form-floating field">
+          <input type="text" id="registerDocumento" class="form-control" placeholder="NIF/NIE" required>
+          <label for="registerDocumento">NIF/NIE</label>
+          <div class="invalid-feedback">
+              Por favor introduza su NIF/NIE!
+          </div>
+          <div class="valid-feedback">
+              OK!
+          </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+        <div class="form-floating field">
+          <input type="text" id="registerEmpresa" class="form-control" placeholder="Empresa">
+          <label for="registerEmpresa">Empresa</label>
+          <div class="invalid-feedback">
+              Por favor introduza sus apellidos!
+          </div>
+          <div class="valid-feedback">
+              OK!
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-label-group">
       <div class="form-floating field">
-      <input type="email" id="inputEmail" value="<?php echo $user?>" class="form-control" placeholder="Email address" required>
-      <label for="inputEmail">Correo electrónico</label>
+      <input type="email" id="registerEmail" class="form-control" placeholder="Correo Electrónico" required>
+      <label for="registerEmail">Correo electrónico</label>
       <div class="invalid-feedback">
           Por favor introduza su correo!
       </div>
@@ -82,11 +138,39 @@
       </div>
     </div>
     <div class="form-label-group">
-    <div class="form-floating field">
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <label for="inputPassword">Contraseña</label>
+      <div class="row">
+      <div class="col-md-6">
+        <div class="form-floating field">
+          <input type="password" id="registerPassword" class="form-control" placeholder="Contraseña" required>
+          <label for="registerPassword">Contraseña</label>
+          <div class="invalid-feedback">
+              Por favor introduza su contraseña!
+          </div>
+          <div class="valid-feedback">
+              OK!
+          </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+        <div class="form-floating field">
+          <input type="password" id="registerConfirmPassword" class="form-control" placeholder="Confirma Contraseña" required>
+          <label for="registerConfirmPassword">Confirma Contraseña</label>
+          <div class="invalid-feedback">
+              Por favor confirma tu contraseña!
+          </div>
+          <div class="valid-feedback">
+              OK!
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-label-group">
+      <div class="form-floating field">
+      <input type="date" id="registerFechaNacimiento" class="form-control" placeholder="Fecha Nacimeinto" required>
+      <label for="registerFechaNacimiento">Fecha de Nacimiento</label>
       <div class="invalid-feedback">
-          Por favor introduza su contraseña!
+          Por favor introduza su fecha de nacimiento!
       </div>
       <div class="valid-feedback">
           OK!
@@ -96,12 +180,18 @@
         
     <div class="checkbox mb-3">
       <label>
-        <input type="checkbox" id="remember" value="check"> Remember me
+        <input type="checkbox" id="remember" value="check" required> Acepto las <a target="_blank" href="../legal/privacidad.php">Politicas de Privacidad.</a>
+        <div class="invalid-feedback">
+          Acepta las politicas de privacidad
+        </div>
+        <div class="valid-feedback">
+            OK!
+        </div>
       </label>
     </div>
-    <button class="btn btn-lg w-100 btn-primary btn-block" type="submit">Log in</button>
+    <button class="btn btn-lg w-100 btn-primary btn-block" type="submit">Sign in</button>
     <div class="mb-1 form-label-group">
-      <p class="mt-3">¿Todavía no tienes una cuenta? <a href="registro.php">Registrate</a></p>
+      <p class="mt-3">¿Ya tienes una cuenta? <a href="/">Log in</a></p>
     </div>
   </form>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -128,10 +218,11 @@
         a.google:hover, a.google:active {
             opacity: 0.8;
         }
+
     </style>
   </body>
   <script src="../assets/bt/js/bootstrap.js"></script>
 <script src="../assets/js/libs/crypto-js/aes.js"></script>
 <script src="../assets/js/cryptool/hashFunctions.js"></script>
-<script src="../assets/js/login.js"></script>
+<script src="../assets/js/register.js"></script>
 

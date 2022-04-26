@@ -27,8 +27,15 @@ setcookie("UUID",$configs["securityUUIDToken"], time() + 3600, "/");
               setcookie("__err__", "wrongRequest",time() + 3600,"/");
               break;
             
-            case $configs["connectionFail"]:
+            case $configs["connectionFailToken"]:
               setcookie("__err__", "connectionFail",time() + 3600,"/");
+              break;
+            
+            case $configs["confirmPasswordToken"]:
+                setcookie("__err__", "confirmPassword",time() + 3600,"/");
+                break;
+            case $configs["registerFailToken"]:
+              setcookie("__err__", "registerFail",time() + 3600,"/");
               break;
           }
       }

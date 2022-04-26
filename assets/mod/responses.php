@@ -5,7 +5,7 @@ return array(
     
     "notAutorized" => "<div class='alertMessage mt-5 text-justify alert alert-danger alert-dismissible fade show'  role='alert' style='text-align: justify;'>
                         <svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Warning:'><use xlink:href='#exclamation-triangle-fill'/></svg>
-                        <strong>Usuario no Autorizado</strong> No estás autorizado a acceder al digital twin. Contacte con un administrador en: <a target='_blank' href='mailto:ufvmyparking@gmail.com' >ufvmyparking@gmail.com</a>
+                        <strong>Usuario no Autorizado</strong> No estás autorizado a acceder al portal. Contacte con un administrador en: <a target='_blank' href='mailto:soporte@feedex.com' >soporte@feedex.com</a>
                         <button type='button' class='btn-close' id='closeButton' data-bs-dismiss='alert' aria-label='Close'></button>
                         </div>",
     "wrongUserPass" => "<div class='alertMessage mt-5 text-justify alert alert-danger alert-dismissible fade show' role='alert'>
@@ -32,6 +32,16 @@ return array(
     "connectionFail" => "<div class='alertMessage mt-5 text-justify alert alert-dismissible alert-warning alert-dismissible fade show'  role='alert' style='text-align: justify;'>
                         <svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Warning:'><use xlink:href='#exclamation-triangle-fill'/></svg>
                         <strong>Error de Conexión</strong> No ha sido posible realizar el login, sentimos las molestias. Vuelva a intentarlo en unos minutos.
+                        <button type='button' class='btn-close' id='closeButton' data-bs-dismiss='alert' aria-label='Close'></button>
+                        </div>",
+    "confirmPassword" => "<div class='alertMessage mt-5 text-justify alert alert-dismissible alert-warning alert-dismissible fade show'  role='alert' style='text-align: justify;'>
+                        <svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Warning:'><use xlink:href='#exclamation-triangle-fill'/></svg>
+                        <strong>Error deRegistro</strong> Confirma tu contraseña!
+                        <button type='button' class='btn-close' id='closeButton' data-bs-dismiss='alert' aria-label='Close'></button>
+                        </div>",
+    "registerFail" => "<div class='alertMessage mt-5 text-justify alert alert-dismissible alert-warning alert-dismissible fade show'  role='alert' style='text-align: justify;'>
+                        <svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Warning:'><use xlink:href='#exclamation-triangle-fill'/></svg>
+                        <strong>Error de Registro</strong> No ha sido posible realizar el registro.
                         <button type='button' class='btn-close' id='closeButton' data-bs-dismiss='alert' aria-label='Close'></button>
                         </div>"
                     );

@@ -319,9 +319,9 @@ input[type=submit] {
     }
   }
   .form-signin #logo{
-  width: 250px;
-  height: 65px;
-  margin: 50px 0;
+    width: 250px;
+    height: 75px;
+    margin: 50px 0;
 }
 .nav-item{
   margin:5px!important;

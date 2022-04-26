@@ -8,8 +8,7 @@ return array(
     'wrongUserPassToken'  => 'b9dbc2d8d36b436427ff2b2c91ecbf29',
     'successToken'        => '7780d5896a66ba13498eb9d5dc05883e',
     'wrongRequestToken'   => '49a4d42f39317c5b7a314b6113f5a636',
-    'defaultIP'           => '127.0.0.1',
-    'defaultPort'         => '8888',
-    'defaultPollInterval' => '0.5',
+    'confirmPasswordToken'=> '54653d3b67102403e56aafe41af9fc5e',
+    'registerFailToken'   => '8b45a900d476b9c070556573f3ebd4a4',
     'httpHost'            => $_SERVER['HTTP_HOST']
 );

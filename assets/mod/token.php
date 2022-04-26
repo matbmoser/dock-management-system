@@ -1,12 +1,12 @@
 <?php
 
-$username = "";
+$nombre = "";
 $token = "";
 
 $token = $_SESSION['token'];
-$username = $_SESSION['username'];
+$nombre = $_SESSION['nombre'];
 
-if(empty($token) || empty($username)){
+if(empty($token) || empty($nombre)){
   error("securityErrorToken");
   exit;
 }
@@ -27,9 +27,7 @@ if($token != $r_token){
 $roleResult = $conexion->query("SELECT * FROM Rol WHERE `id`=".$row->idRol);
 $rowResult = $roleResult->fetch_object();
 
-if($rowResult->digitalTwin != 1){
-  error("notAuthorizedToken");
-}
 
-$username = $row->username;
+$userRol = $rowResult;
+$nombre = $row->nombre;
 ?>
