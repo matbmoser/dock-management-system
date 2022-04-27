@@ -4,7 +4,7 @@
     header("Location:  ../");
   }
   
-  include('../assets/mod/loginCookies.php');
+  include('../assets/mod/registerCookies.php');
     
 
   $user = "";

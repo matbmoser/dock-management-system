@@ -26,7 +26,7 @@ return array(
                         </div>",
     "wrongRequest"  => "<div class='alertMessage mt-5 alert alert-danger alert-dismissible fade show' role='alert'>
                         <svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Danger:'><use xlink:href='#exclamation-triangle-fill'/></svg>
-                        <strong>Ups...</strong> ¡Algo salió mal! Intente hacer login otra vez.
+                        <strong>Ups...</strong> ¡Algo salió mal! Intente hacer login o registro otra vez.
                         <button type='button' class='btn-close' id='closeButton' data-bs-dismiss='alert' aria-label='Close'></button>
                         </div>",
     "connectionFail" => "<div class='alertMessage mt-5 text-justify alert alert-dismissible alert-warning alert-dismissible fade show'  role='alert' style='text-align: justify;'>

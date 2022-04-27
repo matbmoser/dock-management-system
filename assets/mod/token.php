@@ -11,23 +11,24 @@ if(empty($token) || empty($nombre)){
   exit;
 }
 
-if(!$result = $conexion->query("SELECT * FROM Usuario")){
+if(!$result = $conexion->query("SELECT * FROM Usuario WHERE token='$token' ")){
   error("connectionFailToken");
   exit;
 }
 
-$row = $result->fetch_object();
-$r_token = hash('sha256',$row->email.$row->password);
+$usuario = $result->fetch_object();
+
+$r_token = hash('sha256',$usuario->email.$usuario->password);
 
 if($token != $r_token){
   error("securityErrorToken");
   exit;
 }
 
-$roleResult = $conexion->query("SELECT * FROM Rol WHERE `id`=".$row->idRol);
+$roleResult = $conexion->query("SELECT * FROM Rol WHERE `id`=".$usuario->idRol);
 $rowResult = $roleResult->fetch_object();
 
 
-$userRol = $rowResult;
-$nombre = $row->nombre;
+$permits = $rowResult;
+$nombre = $usuario->nombre;
 ?>

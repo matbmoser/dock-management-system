@@ -16,7 +16,7 @@ $email = $_POST['email'];
 $fechaNacimiento = $_POST['fechaNacimiento'];
 $token = $_POST['token'];
 $empresa = "";
-if (isset($_POST['empresa'])){
+if (!empty($_POST['empresa'])){
     $empresa = $_POST['empresa'];
 }
 $date = date('Y-m-d H:i:s');
@@ -43,16 +43,15 @@ $sql = "INSERT INTO `sgm`.`usuario`
         '$fechaNacimiento',
         '$date',
         '$date',
-        (SELECT id FROM sgm.`rol` WHERE nombre='Transportista'),
+        (SELECT id FROM sgm.rol WHERE nombre='Transportista'),
         '$token'
         );";
-        echo $sql;
 
 if($result = $conexion->query($sql)){
     $arraySucess=array('responseCode' => $configs["successToken"]);
-    $userData = json_decode(json_encode($row), true);
+    $userData = array('nombre' => $nombre, 'token' => $token);
     echo json_encode(array_merge($arraySucess,$userData));
 
 }else{
-    echo json_encode(array('responseCode' => $configs["registerFail"]));
+    echo json_encode(array('responseCode' => $configs["registerFailToken"]));
 }

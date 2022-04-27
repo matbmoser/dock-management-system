@@ -24,33 +24,29 @@ $(function() {
             form.classList.add('was-validated'); //Y cambia la classe del formulario, para validado
         } //Si son validos el bucle se detiene
         else{
-            var email = $('#registerEmail').val().toLowerCase();
-            var nombre = $('#registerNombre').val();
-            var apellidos = $('#registerApellidos').val();
-            var pass = $('#registerPassword').val();
-            var documento = $('#registerDocumento').val();
-            var confirmPass = $('#registerConfirmPassword').val();
-            var fechaNacimiento = $('#registerFechaNacimiento').val();
-            var remember = document.getElementById("remember");
-            
-            
-            if (email == "" || nombre == "" || documento =="" || apellidos== ""  || pass== ""  || confirmPas== ""  || fechaNacimiento== "" || confirm== "" || !remember.checked){
-                event.preventDefault();
-                event.stopPropagation();
-                form.classList.add('was-validated'); //Y cambia la classe del formulario, para validado
-                return true 
-            }
-
-            if(confirmPass != pass){
-                window.location.search = "?result="+configs["confirmPasswordToken"];
-                return true 
-            }
-
-            const params = await prepare(email,nombre,documento, apellidos,pass, fechaNacimiento);
+            var user = {}
+            user["email"] = document.getElementById('registerEmail').value.toLowerCase();
+            user["nombre"] = document.getElementById('registerNombre').value.toString();
+            user["apellidos"] = document.getElementById('registerApellidos').value.toString();
+            user["pass"] = document.getElementById('registerPassword').value;
+            user["documento"] = document.getElementById('registerDocumento').value.toString();
+            user["confirmPass"] = document.getElementById('registerConfirmPassword').value;
+            user["fechaNacimiento"] = document.getElementById('registerFechaNacimiento').value.toString();
+            user["remember"] = document.getElementById("remember");
+            console.log(user);
         
+            if(user["confirmPass"] !== user["pass"]){
+                window.location.search = "?result="+configs["confirmPasswordToken"];
+                return 
+            }
+
+            const params = await prepare(user);
+            
+            alert(params);
+
             http.onreadystatechange = function() {
                 if(http.readyState === 4) {
-                    alert(http.responseText)
+                    alert(http.responseText);
                     var responseCode = configs["wrongRequestToken"];
 
                     try{
@@ -82,12 +78,12 @@ $(function() {
     }, false);
 });
 
-async function prepare(email,nombre,apellidos,pass, fechaNacimiento){
-    const cryptpass = await sha256(pass);
-    const seed = user+cryptpass;
+async function prepare(user){
+    const cryptpass = await sha256(user["pass"]);
+    const seed = user["email"]+cryptpass;
     const token = await sha256(seed);
     const UUID = getCookie("UUID");
-    return 'email='+email +'&nombre='+ nombre +'&documento' + documento+ '&apellidos='+ apellidos +'&pass='+ cryptpass + '&fechaNacimiento='+ fechaNacimiento + '&token=' + token + "&uuid=" + UUID;
+    return 'email='+user["email"] +'&nombre='+ user["nombre"]  +'&documento=' + user["documento"]+ '&apellidos='+ user["apellidos"] +'&pass='+ cryptpass + '&fechaNacimiento='+ user["fechaNacimiento"] + '&token=' + token + "&uuid=" + UUID;
 }
 
 
