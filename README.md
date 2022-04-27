@@ -29,7 +29,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/matbmoser/gestor-muelles-feedex">
-    <img src="media/img/feedex.png" alt="Logo" width="300" height="150">
+    <img src="media/img/feedex.png" alt="Logo" width="300" height="80">
   </a>
 
 <h3 align="center">Gestor de Muelles FeedEx</h3>
