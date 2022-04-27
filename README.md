@@ -83,7 +83,7 @@
 
 ### Vista Gestor 
 
-[![Product Name Screen Shot 2][product-screenshot2]]()
+[![Product Name Screen Shot][product-screenshot2]]()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -182,4 +182,4 @@ Project Link: [https://github.com/matbmoser/gestor-muelles-feedex](https://githu
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mathias-brunkow-moser
 [product-screenshot]: images/screenshot.png
-[product-screensho2]: images/screenshot2.png
+[product-screenshot2]: images/screenshot2.png

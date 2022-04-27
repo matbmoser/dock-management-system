@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Sistema de Gestión de Muelles" company="Feedex" webLink="http://" view-date="2022-03-01" view-index="0" gantt-divider-location="537" resource-divider-location="518" version="3.1.3103" locale="es_ES">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd10" name="Id." width="41" order="0"/>
+        <field id="tpd3" name="Nombre" width="178" order="1"/>
+        <field id="tpd4" name="Fecha de inicio" width="94" order="2"/>
+        <field id="tpd5" name="Fecha de fin" width="94" order="3"/>
+        <field id="tpd12" name="Costo" width="68" order="4"/>
+        <field id="tpd6" name="Duración" width="42" order="5"/>
+        <option id="taskLabelUp" value="taskDates"/>
+        <option id="taskLabelDown" value="length"/>
+        <option id="taskLabelLeft" value="resources"/>
+        <option id="taskLabelRight" value="name"/>
+        <option id="color.recent">
+            <![CDATA[#ffcc00 #ffcc33 #33ff33 #ff0000 #00ff66 #ff0033 #00ffff #0000ff]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="215" order="0"/>
+        <field id="1" name="Función" width="94" order="1"/>
+        <field id="5" name="Tarifa estándar" width="85" order="2"/>
+        <field id="6" name="Coste total" width="61" order="3"/>
+        <field id="7" name="Carga total" width="60" order="4"/>
+    </view>
+    <!-- -->
+    <calendars base-id="es">
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="" month="1" date="1" type="HOLIDAY">
+            <![CDATA[New Year's Day]]>
+        </date>
+        <date year="" month="1" date="6" type="HOLIDAY">
+            <![CDATA[Epiphany]]>
+        </date>
+        <date year="" month="5" date="1" type="HOLIDAY">
+            <![CDATA[Labour Day]]>
+        </date>
+        <date year="" month="8" date="15" type="HOLIDAY">
+            <![CDATA[Assumption Day]]>
+        </date>
+        <date year="" month="10" date="12" type="HOLIDAY">
+            <![CDATA[Hispanic Day]]>
+        </date>
+        <date year="" month="11" date="1" type="HOLIDAY">
+            <![CDATA[All Saints Day]]>
+        </date>
+        <date year="" month="12" date="6" type="HOLIDAY">
+            <![CDATA[Constitution Day]]>
+        </date>
+        <date year="" month="12" date="8" type="HOLIDAY">
+            <![CDATA[Immaculate Conception Day]]>
+        </date>
+        <date year="" month="12" date="25" type="HOLIDAY">
+            <![CDATA[Christmas Day]]>
+        </date>
+        <date year="2016" month="3" date="24" type="HOLIDAY" color="#808080">
+            <![CDATA[Maundy Thursday]]>
+        </date>
+        <date year="2016" month="3" date="25" type="HOLIDAY">
+            <![CDATA[Good Friday]]>
+        </date>
+        <date year="2017" month="1" date="2" type="HOLIDAY">
+            <![CDATA[New Year's Holiday]]>
+        </date>
+        <date year="2017" month="4" date="13" type="HOLIDAY">
+            <![CDATA[Maundy Thursday]]>
+        </date>
+        <date year="2017" month="4" date="14" type="HOLIDAY">
+            <![CDATA[Good Friday]]>
+        </date>
+        <date year="2018" month="3" date="29" type="HOLIDAY">
+            <![CDATA[Maundy Thursday]]>
+        </date>
+        <date year="2018" month="3" date="30" type="HOLIDAY">
+            <![CDATA[Good Friday]]>
+        </date>
+        <date year="2019" month="4" date="18" type="HOLIDAY">
+            <![CDATA[Maundy Thursday]]>
+        </date>
+        <date year="2019" month="4" date="19" type="HOLIDAY">
+            <![CDATA[Good Friday]]>
+        </date>
+        <date year="2020" month="4" date="9" type="HOLIDAY">
+            <![CDATA[Maundy Thursday]]>
+        </date>
+        <date year="2020" month="4" date="10" type="HOLIDAY">
+            <![CDATA[Good Friday]]>
+        </date>
+        <date year="2020" month="11" date="2" type="HOLIDAY">
+            <![CDATA[All Saints Day (in lieu)]]>
+        </date>
+        <date year="2020" month="12" date="7" type="HOLIDAY">
+            <![CDATA[Constitution Day (in lieu)]]>
+        </date>
+        <date year="2021" month="4" date="1" type="HOLIDAY">
+            <![CDATA[Maundy Thursday]]>
+        </date>
+        <date year="2021" month="4" date="2" type="HOLIDAY">
+            <![CDATA[Good Friday]]>
+        </date>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Entrega URD y SPMP" color="#0000ff" meeting="true" start="2022-03-07" duration="0" complete="0" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+            <depend id="52" type="2" difference="1" hardness="Strong"/>
+            <depend id="53" type="2" difference="1" hardness="Strong"/>
+        </task>
+        <task id="25" name="Diseño" color="#8cb6ce" meeting="false" start="2022-03-08" duration="3" complete="100" thirdDate="2022-03-03" thirdDate-constraint="0" expand="true">
+            <task id="52" name="Diseño Modelo de Datos" color="#8cb6ce" meeting="false" start="2022-03-08" duration="3" complete="100" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <depend id="54" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="53" name="Diseño de Interfaz" color="#8cb6ce" meeting="false" start="2022-03-08" duration="3" complete="100" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <depend id="30" type="2" difference="0" hardness="Strong"/>
+                <depend id="56" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="20" name="Entrega SCMP y SVVP" color="#ff0033" meeting="true" start="2022-03-21" duration="0" complete="0" thirdDate="2022-03-04" thirdDate-constraint="0" expand="true"/>
+        <task id="26" name="Desarrollo" color="#8cb6ce" meeting="false" project="true" start="2022-03-11" duration="29" complete="62" thirdDate="2022-03-03" thirdDate-constraint="0" expand="true">
+            <depend id="42" type="2" difference="0" hardness="Strong"/>
+            <task id="54" name="Construcción de BBDD" color="#8cb6ce" meeting="false" start="2022-03-11" duration="1" complete="100" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <depend id="33" type="2" difference="0" hardness="Strong"/>
+                <depend id="56" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="33" name="Desarrollo de Autenticación" color="#8cb6ce" meeting="false" start="2022-03-14" duration="8" complete="100" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <depend id="30" type="2" difference="0" hardness="Strong"/>
+                <depend id="40" type="2" difference="3" hardness="Strong"/>
+            </task>
+            <task id="56" name="Gestión de Accesos" color="#8cb6ce" meeting="false" start="2022-03-14" duration="5" complete="100" thirdDate="2022-03-08" thirdDate-constraint="0" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" name="Desarrollo Backoffice Pedidos" color="#8cb6ce" meeting="false" start="2022-03-21" duration="6" complete="100" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <depend id="28" type="2" difference="0" hardness="Strong"/>
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="30" name="Desarrollo Dashboard Backoffice" color="#8cb6ce" meeting="false" start="2022-03-24" duration="8" complete="88" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <depend id="28" type="2" difference="-5" hardness="Strong"/>
+                <depend id="29" type="2" difference="2" hardness="Strong"/>
+            </task>
+            <task id="28" name="Desarrollo Backoffice Muelles" color="#33ff33" meeting="false" start="2022-03-29" duration="6" complete="68" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Se adelanta la tarea de desarrollo backoffice muelles ya que se dectectó que la estructura de la tarea finalizada con antelación desarrollo backoffice pedidos es muy parecida a la de backoffice muelles.
+
+Retraso:
+-5 dias
+
+Inicio Anterior.
+04/04
+
+Inicio Actual:
+29/03]]>
+                </notes>
+                <depend id="32" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="40" name="Desarrollo Área Usuario" color="#ff0000" meeting="false" start="2022-03-29" duration="8" complete="51" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Se retrasa tres dias la tarea de área de usuario debido a que la paralelización del desarrollo del Backoffice Muelles y la tarea de desarrollo backoffice dashboard es mucho más sencilla.
+
+Retraso: +3 dias
+
+Inicio Anterior:
+24/04
+
+Inicio Actual:
+29/04
+
+]]>
+                </notes>
+                <depend id="32" type="2" difference="5" hardness="Strong"/>
+            </task>
+            <task id="32" name="Desarrollo de Generador de Informes" color="#ffcc33" meeting="false" start="2022-04-15" duration="4" complete="0" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Se añade dos dias más al generador de informes, como consecuencia del cambio de alcance.
+
+Antes: 2 dias
+Ahora: 4 dias]]>
+                </notes>
+                <depend id="47" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="29" name="Desarrollo Portal de Incidencias" color="#8cb6ce" meeting="false" start="2022-04-07" duration="5" complete="0" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="31" name="Desarrollo de Interfaz Gestión de Pedidos" color="#8cb6ce" meeting="false" start="2022-04-14" duration="5" complete="0" thirdDate="2022-03-07" thirdDate-constraint="0" expand="true">
+                <depend id="47" type="2" difference="0" hardness="Strong"/>
+                <depend id="51" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="42" name="Pruebas" color="#8cb6ce" meeting="false" start="2022-04-21" duration="2" complete="0" thirdDate="2022-03-28" thirdDate-constraint="0" expand="true">
+            <depend id="24" type="2" difference="0" hardness="Strong"/>
+            <task id="47" name="Revisión del Código" color="#ffcc00" meeting="false" start="2022-04-21" duration="2" complete="0" thirdDate="2022-04-20" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Se reduce de 4 a 2 dias la revisión del codigo con el fin de mantener la entrega de la practica y la defensa en el dia 25/04/2022
+
+El retraso es consecuencia del cambio del alcance y del retraso en la tarea de Desarrollo Área Usuario: [40]
+
+Antes: 4 dias
+Ahora 2 dias]]>
+                </notes>
+                <depend id="24" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="51" name="Pruebas de Validación" color="#ffcc00" meeting="false" start="2022-04-21" duration="2" complete="0" thirdDate="2022-04-20" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Se reduce de 3 a 2 dias las pruebas de validación con el fin de mantener la entrega de la practica y la defensa en el dia 25/04/2022
+
+El retraso es consecuencia del cambio del alcance y del retraso en la tarea de Desarrollo Área Usuario: [40]
+
+Antes: 3 dias
+Ahora 2 dias]]>
+                </notes>
+                <depend id="24" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="22" name="Entrega Informe de Seguimiento y el SQAP" color="#33ff33" meeting="true" start="2022-04-04" duration="0" complete="0" thirdDate="2022-03-04" thirdDate-constraint="0" expand="true"/>
+        <task id="24" name="Entrega Práctica y Defensa" color="#00ffff" meeting="true" start="2022-04-25" duration="0" complete="0" thirdDate="2022-03-04" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Jefe de Proyecto" function="Default:1" contacts="" phone="">
+            <rate name="standard" value="23.11"/>
+        </resource>
+        <resource id="1" name="Aquitecto de Solución" function="Default:1" contacts="" phone="">
+            <rate name="standard" value="19.69"/>
+        </resource>
+        <resource id="2" name="Gestor de la Calidad y UX" function="SoftwareDevelopment:3" contacts="" phone="">
+            <rate name="standard" value="18.48"/>
+        </resource>
+        <resource id="3" name="Desarrollador Backend I" function="SoftwareDevelopment:2" contacts="" phone="">
+            <rate name="standard" value="17.01"/>
+        </resource>
+        <resource id="5" name="Desarrollador Backend II" function="SoftwareDevelopment:2" contacts="" phone="">
+            <rate name="standard" value="17.01"/>
+        </resource>
+        <resource id="6" name="Desarrollador Frontend I" function="SoftwareDevelopment:2" contacts="" phone="">
+            <rate name="standard" value="10.19"/>
+        </resource>
+        <resource id="9" name="Desarrollador Frontend II" function="SoftwareDevelopment:2" contacts="" phone="">
+            <rate name="standard" value="10.19"/>
+        </resource>
+        <resource id="7" name="Desarrolador Tester" function="SoftwareDevelopment:4" contacts="" phone="">
+            <rate name="standard" value="13.38"/>
+        </resource>
+        <resource id="8" name="Analista de Datos" function="SoftwareDevelopment:8" contacts="" phone="">
+            <rate name="standard" value="10.01"/>
+        </resource>
+    </resources>
+    <allocations>
+        <allocation task-id="20" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="22" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="24" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="52" resource-id="1" function="Default:1" responsible="false" load="50.0"/>
+        <allocation task-id="53" resource-id="1" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="51" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="20" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="24" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="53" resource-id="2" function="SoftwareDevelopment:3" responsible="false" load="100.0"/>
+        <allocation task-id="47" resource-id="2" function="SoftwareDevelopment:3" responsible="true" load="70.0"/>
+        <allocation task-id="51" resource-id="2" function="SoftwareDevelopment:3" responsible="false" load="15.0"/>
+        <allocation task-id="31" resource-id="2" function="SoftwareDevelopment:3" responsible="false" load="100.0"/>
+        <allocation task-id="20" resource-id="2" function="SoftwareDevelopment:3" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="2" function="SoftwareDevelopment:3" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="2" function="SoftwareDevelopment:3" responsible="false" load="100.0"/>
+        <allocation task-id="24" resource-id="2" function="SoftwareDevelopment:3" responsible="false" load="100.0"/>
+        <allocation task-id="40" resource-id="2" function="SoftwareDevelopment:3" responsible="false" load="100.0"/>
+        <allocation task-id="56" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="31" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="40" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="33" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="28" resource-id="5" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
+        <allocation task-id="29" resource-id="5" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="53" resource-id="6" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="56" resource-id="6" function="SoftwareDevelopment:2" responsible="false" load="75.0"/>
+        <allocation task-id="33" resource-id="6" function="SoftwareDevelopment:2" responsible="false" load="20.0"/>
+        <allocation task-id="27" resource-id="6" function="SoftwareDevelopment:2" responsible="false" load="75.0"/>
+        <allocation task-id="31" resource-id="6" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="40" resource-id="6" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
+        <allocation task-id="40" resource-id="6" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
+        <allocation task-id="53" resource-id="9" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="33" resource-id="9" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="32" resource-id="9" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="30" resource-id="9" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="29" resource-id="9" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="47" resource-id="7" function="SoftwareDevelopment:4" responsible="false" load="15.0"/>
+        <allocation task-id="51" resource-id="7" function="SoftwareDevelopment:4" responsible="true" load="75.0"/>
+        <allocation task-id="28" resource-id="7" function="SoftwareDevelopment:4" responsible="false" load="100.0"/>
+        <allocation task-id="52" resource-id="8" function="SoftwareDevelopment:8" responsible="true" load="100.0"/>
+        <allocation task-id="54" resource-id="8" function="SoftwareDevelopment:8" responsible="true" load="100.0"/>
+        <allocation task-id="32" resource-id="8" function="SoftwareDevelopment:8" responsible="true" load="100.0"/>
+        <allocation task-id="30" resource-id="8" function="SoftwareDevelopment:8" responsible="false" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
