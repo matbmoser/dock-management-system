@@ -1,4 +1,3 @@
-drop database sgm;
 create database sgm;
 
 use sgm;
