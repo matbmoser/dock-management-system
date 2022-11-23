@@ -32,10 +32,10 @@
     <img src="media/img/feedex.png" alt="Logo" width="300" height="100">
   </a>
 
-<h3 align="center">Gestor de Muelles FeedEx</h3>
+<h3 align="center">FeedEx Dock Management System</h3>
 
   <p align="center">
-    Proyecto de la asignatura de PGPI, donde se crea un gestor de muelles web funcional.
+    Project made for IT Project Management class, where a functional dock management web system was developed.
     <br />
     <a href="https://github.com/matbmoser/gestor-muelles-feedex"><strong>Explore the docs »</strong></a>
     <br />
@@ -159,12 +159,16 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 Mathias Brunkow Moser - matbmoser@gmail.com
 
-Project Link: [https://github.com/matbmoser/gestor-muelles-feedex](https://github.com/matbmoser/gestor-muelles-feedex)
+Project Link: [https://github.com/matbmoser/gestor-muelles-feedex](https://github.com/matbmoser/dock-management-system)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
+## Clarifications
+The FeedEx logo and name were based in the company FedEx. As students one of our requirements for the project was to create a fake name and logo based in a real logistic company, in order to simulate and aproximate to the real necesity of a Dock Management System.
+
+There was no intention of defaming the company or to copy its identity in order to speak in its name, and all the project was developed within educational environment, so there was never a intention of selling the product or sharing with third-parties.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
