@@ -148,7 +148,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 This project was managed following the ESA Software Engineering Standards.
 All the documentation built throught the project is uploaded to the `/docs`.
 
-There you will find all the deliverables, which follow the guidelines stablished in the European Space Agency Standard Lifecycle:  
+There you will find all the deliverables, which follow the guidelines stablished in the *European Space Agency Standard Lifecycle*:  
 
 ![image](https://user-images.githubusercontent.com/71728767/203662722-f6aea22f-d920-4083-88ad-979d730a56e2.png)
 Reference [Figure 4.1]: http://microelectronics.esa.int/vhdl/pss/PSS-05-0.pdf#page=93
@@ -170,7 +170,7 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 Mathias Brunkow Moser - matbmoser@gmail.com
 
-Project Link: [https://github.com/matbmoser/gestor-muelles-feedex](https://github.com/matbmoser/dock-management-system)
+Project Link: [https://github.com/matbmoser/dock-management-system](https://github.com/matbmoser/dock-management-system)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -184,16 +184,16 @@ There was no intention of defaming the company or to copy its identity in order 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/matbmoser/gestor-muelles-feedex.svg?style=for-the-badge
-[contributors-url]: https://github.com/matbmoser/gestor-muelles-feedex/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/matbmoser/gestor-muelles-feedex.svg?style=for-the-badge
-[forks-url]: https://github.com/matbmoser/gestor-muelles-feedex/network/members
-[stars-shield]: https://img.shields.io/github/stars/matbmoser/gestor-muelles-feedex.svg?style=for-the-badge
-[stars-url]: https://github.com/matbmoser/gestor-muelles-feedex/stargazers
-[issues-shield]: https://img.shields.io/github/issues/matbmoser/gestor-muelles-feedex.svg?style=for-the-badge
-[issues-url]: https://github.com/matbmoser/gestor-muelles-feedex/issues
-[license-shield]: https://img.shields.io/github/license/matbmoser/gestor-muelles-feedex.svg?style=for-the-badge
-[license-url]: https://github.com/matbmoser/gestor-muelles-feedex/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/matbmoser/dock-management-system.svg?style=for-the-badge
+[contributors-url]: https://github.com/matbmoser/dock-management-system/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/matbmoser/dock-management-system.svg?style=for-the-badge
+[forks-url]: https://github.com/matbmoser/dock-management-system/network/members
+[stars-shield]: https://img.shields.io/github/stars/matbmoser/dock-management-system.svg?style=for-the-badge
+[stars-url]: https://github.com/matbmoser/dock-management-system/stargazers
+[issues-shield]: https://img.shields.io/github/issues/matbmoser/dock-management-system.svg?style=for-the-badge
+[issues-url]: https://github.com/matbmoser/dock-management-system/issues
+[license-shield]: https://img.shields.io/github/license/matbmoser/dock-management-system.svg?style=for-the-badge
+[license-url]: https://github.com/matbmoser/dock-management-system/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mathias-brunkow-moser
 [product-screenshot]: images/screenshot.png
