@@ -153,7 +153,7 @@ There you will find all the deliverables, which follow the guidelines stablished
 ![image](https://user-images.githubusercontent.com/71728767/203662722-f6aea22f-d920-4083-88ad-979d730a56e2.png)
 Reference [Figure 4.1]: http://microelectronics.esa.int/vhdl/pss/PSS-05-0.pdf#page=93
 
-
+> **_NOTE:_**  All the documentation is in `spanish` since the project was for a class in a spanish University (Universidad Francisco de Vitoria)
 
 
 <!-- LICENSE -->
