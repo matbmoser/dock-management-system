@@ -77,11 +77,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-### Vista Transportista 
+### Tranporter View
 
 [![Product Name Screen Shot][product-screenshot]]()
 
-### Vista Gestor 
+### Manager View
 
 [![Product Name Screen Shot][product-screenshot2]]()
 
@@ -142,6 +142,17 @@ To get a local copy up and running follow these simple example steps.
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+## Project Management
+This project was managed following the ESA Software Engineering Standards.
+All the documentation built throught the project is uploaded to the `/docs`.
+
+There you will find all the deliverables, which follow the guidelines stablished in the European Space Agency Standard Lifecycle:  
+
+![image](https://user-images.githubusercontent.com/71728767/203662722-f6aea22f-d920-4083-88ad-979d730a56e2.png)
+Reference [Figure 4.1]: http://microelectronics.esa.int/vhdl/pss/PSS-05-0.pdf#page=93
+
 
 
 
