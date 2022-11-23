@@ -28,7 +28,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/matbmoser/gestor-muelles-feedex">
+  <a href="https://github.com/matbmoser/dock-management-system">
     <img src="media/img/feedex.png" alt="Logo" width="300" height="100">
   </a>
 
@@ -37,14 +37,14 @@
   <p align="center">
     Project made for IT Project Management class, where a functional dock management web system was developed.
     <br />
-    <a href="https://github.com/matbmoser/gestor-muelles-feedex"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/matbmoser/dock-management-system"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/matbmoser/gestor-muelles-feedex">View Demo</a>
+    <a href="https://github.com/matbmoser/dock-management-system">View Demo</a>
     ·
-    <a href="https://github.com/matbmoser/gestor-muelles-feedex/issues">Report Bug</a>
+    <a href="https://github.com/matbmoser/dock-management-system/issues">Report Bug</a>
     ·
-    <a href="https://github.com/matbmoser/gestor-muelles-feedex/issues">Request Feature</a>
+    <a href="https://github.com/matbmoser/dock-management-system/issues">Request Feature</a>
   </p>
 </div>
 
