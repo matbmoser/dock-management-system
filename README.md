@@ -35,7 +35,7 @@
 <h3 align="center">FeedEx Dock Management System</h3>
 
   <p align="center">
-    Project made for IT Project Management class, where a functional dock management web system was developed.
+    Project made for the class of IT Project Management, where a functional dock management web system was developed.
     <br />
     <a href="https://github.com/matbmoser/dock-management-system"><strong>Explore the docs »</strong></a>
     <br />
